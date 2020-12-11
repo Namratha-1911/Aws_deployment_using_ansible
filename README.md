@@ -28,9 +28,5 @@ Example Playbook
       roles:
          - aws-services
 
-License
--------
-
-BSD
 
 
