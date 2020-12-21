@@ -5,7 +5,7 @@ By running this role you will be deploying a Virtual Private Cloud with two subn
 
 Requirements
 ------------
-Install botocore and boto 3 to run this role
+Install boto, core and boto 3 to run this role
 
 Role Variables
 --------------
@@ -23,10 +23,11 @@ keypair_name: "ec2_key_pair
 
 Example Playbook
 ----------------
+[playbook.yaml]
 
     - hosts: localhost or target
       roles:
-         - aws-services
+         - aws-deploy
 
 
 
