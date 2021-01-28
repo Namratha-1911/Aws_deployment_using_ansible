@@ -5,7 +5,7 @@ By running this role you will be deploying a Virtual Private Cloud with two subn
 
 Requirements
 ------------
-Install boto, core and boto 3 to run this role
+Install boto, botocore and boto 3 to run this role
 
 Role Variables
 --------------
