@@ -98,21 +98,17 @@
                           Environment: testing
                           Application: cms
 
-#creating ec2 instance
- - name: Ansible test
- hosts: localhost
- tasks:
-   - name: launching AWS instance using Ansible
-     ec2:
-     key_name: ansible
-     instance_type: t2.micro
-     image: ami-04505e74c0741db8d
-     region: us-east-1
-     wait: yes
-     group: Ansible
-     count: 1
-     vpc_subnet_id: "{{ subnet.subnet.id}}"
-     assign_public_ip: yes
+
+# Basic provisioning example
+- amazon.aws.ec2:
+    key_name: mykey
+    instance_type: t2.micro
+    image: ami-123456
+    wait: yes
+    group: webserver
+    count: 3
+    vpc_subnet_id: subnet-29e63245
+    assign_public_ip: yes
 
 
 
